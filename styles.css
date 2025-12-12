@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --color-gray-light: oklch(86.9% 0.022 252.894);
+  --color-gray-dark: oklch(27.9% 0.041 260.031);
+  --color-amber: oklch(87.9% 0.169 91.605);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--color-gray-dark);
+}
+
+.page-wrapper {
+  width: 100vw;
+  display: flex;
+}
+
+.section-intro,
+.section-projects {
+  padding: 2rem;
+  height: 100vh;
+}
+
+.section-intro {
+  width: 50%;
+  background-color: var(--color-gray);
+}
+
+.section-intro-title {
+  margin-bottom: 1rem;
+}
+
+.section-intro-body {
+  max-width: 70%;
+}
+
+.section-projects {
+  width: 50%;
+  background-color: var(--color-amber);
+}
