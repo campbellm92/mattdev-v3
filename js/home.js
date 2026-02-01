@@ -1,17 +1,4 @@
-async function fetchProjectData() {
-  const response = await fetch("/data/projects.json", {
-    cache: "force-cache",
-  });
-
-  if (!response.ok) {
-    throw new Error("Project data not found");
-  }
-
-  const data = await response.json();
-  console.log(data);
-
-  return data;
-}
+import { fetchProjectData } from "./api/fetchProjectData.js";
 
 async function renderProjectCardsData() {
   const projectCardsTemplate = document.getElementById("project-card-template");
@@ -21,9 +8,9 @@ async function renderProjectCardsData() {
   projectsData.projects.forEach((project) => {
     const cardClone = projectCardsTemplate.content.cloneNode(true);
 
-    cardClone.querySelector(".project-title").textContent = project.title;
+    cardClone.querySelector(".project-card-title").textContent = project.title;
 
-    const linksContainer = cardClone.querySelector(".project-links");
+    const linksContainer = cardClone.querySelector(".project-card-links");
     if (project.links?.repo) {
       const repoLink = document.createElement("a");
       repoLink.href = project.links.repo;
