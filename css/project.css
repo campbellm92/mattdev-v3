@@ -5,7 +5,8 @@ body {
 
 .project-detail-title,
 .project-detail-technologies,
-.project-detail-description {
+.project-detail-description,
+.project-detail-highlights-list {
   margin-bottom: 1.5rem;
 }
 
@@ -22,10 +23,20 @@ body {
 }
 
 .project-detail-description {
-  /*  */
+  max-width: 80%;
 }
 
 .project-detail-highlights-header {
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.project-detail-links-header {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: 2rem;
 }
