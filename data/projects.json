@@ -1,0 +1,45 @@
+{
+  "projects": [
+    {
+      "id": "db-deduplication",
+      "title": "Database Deduplication Workflow",
+      "description": "Python data project completed during my paid internship that deals with the auditing and removal of many product duplicates from the company database.",
+      "technologies": ["Python", "MongoDB", "Pandas"],
+      "links": {
+        "repo": "https://github.com/campbellm92/products-deduplication-workflow"
+      },
+      "highlights": [
+        "Large CSV dataset processing",
+        "Data auditing",
+        "Clean export pipelines"
+      ],
+      "status": ["complete"]
+    },
+
+    {
+      "id": "atp-radio",
+      "title": "ATP Radio",
+      "description": "A fullstack radio application that generates randomised playlists and utilises the Spotify SDK for playback.",
+      "technologies": ["Python", "TypeScript", "FastAPI", "HTML", "CSS"],
+      "links": {
+        "repo": "https://github.com/campbellm92/atp-radio",
+        "live": "https://www.slingacademy.com/article/conditional-rendering-show-or-hide-elements-using-javascript/"
+      },
+      "highlights": ["Custom SQLite database with lineup data", ""],
+      "status": ["live", "development ongoing"]
+    },
+
+    {
+      "id": "eo-arte",
+      "title": "EO Arte Website",
+      "description": "A website built for a local art collective.",
+      "technologies": ["PHP", "Wordpress", "JavaScript", "HTML", "TailwindCSS"],
+      "links": {
+        "repo": "https://github.com/campbellm92/eo-arte-website",
+        "live": ""
+      },
+      "highlights": ["Wordpress CMS", "Custom Post Types"],
+      "status": ["coming soon"]
+    }
+  ]
+}
