@@ -39,12 +39,33 @@ async function loadProjectPage() {
     project.description;
 
   // project highlights
-  const highlightsList = document.querySelector("ul");
+  const highlightsList = document.querySelector(
+    ".project-detail-highlights-list",
+  );
   const highlights = project.highlights;
   highlights.forEach((highlight) => {
     const element = document.createElement("li");
     element.innerText = highlight;
     highlightsList.append(element);
   });
+
+  // project links
+  const linksWrapper = document.querySelector(".project-detail-links");
+  if (project.links.repo) {
+    const repoLink = document.createElement("a");
+    repoLink.href = project.links.repo;
+    repoLink.textContent = "GitHub";
+    repoLink.target = "_blank";
+    repoLink.rel = "noopener";
+    linksWrapper.appendChild(repoLink);
+  }
+  if (project.links.live) {
+    const liveLink = document.createElement("a");
+    liveLink.href = project.links.repo;
+    liveLink.textContent = "Live";
+    liveLink.target = "_blank";
+    liveLink.rel = "noopener";
+    linksWrapper.appendChild(liveLink);
+  }
 }
 loadProjectPage();
