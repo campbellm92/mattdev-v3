@@ -1,0 +1,31 @@
+body {
+  background-color: var(--color-gray-light);
+  padding: 2rem;
+}
+
+.project-detail-title,
+.project-detail-technologies,
+.project-detail-description {
+  margin-bottom: 1.5rem;
+}
+
+.project-detail-title {
+  /*  */
+}
+
+.project-detail-technologies {
+  display: flex;
+  gap: 2rem;
+  color: var(--color-amber);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.project-detail-description {
+  /*  */
+}
+
+.project-detail-highlights-header {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
