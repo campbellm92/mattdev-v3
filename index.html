@@ -4,26 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preload" href="/data/projects.json" as="fetch" crossorigin>
+    <title>Matthew Campbell</title>
+    <script type="module" src="/js/home.js"></script>
 </head>
 
 <body>
-    <div class="page-wrapper">
-        <section class="section-intro">
-            <h1 class="section-intro-title">Matthew Campbell</h1>
-            <p class="section-intro-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam natus nam
-                nesciunt
-                fuga, hic pariatur
-                molestiae recusandae sequi aut. Aperiam suscipit consequuntur a dignissimos rerum quae odit explicabo
-                eius
-                praesentium!</p>
+    <main class="page-wrapper">
+        <section class="section-left">
+            <div class="intro">
+                <h1>Matthew Campbell</h1>
+                <img src="/assets/images/matt.webp" alt="Matt">
+                <p>Backend-leaning Fullstack Developer based sdfksdlfkmsldfkmlskdmflskmdflksmdlfkmsdlfkmsldkmflmin Asti,
+                    Italy</p>
+            </div>
+            <div class="skills">
+                <ul>
+                    <li>💻 JavaScript, Python, PHP</li>
+                    <li>📚 React, Node, FastAPI</li>
+                    <li>🌐 SQL, MongoDB</li>
+                    <li>Wordpress, git, VPS, Pandas</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="section-projects">
-            <h1>Projects</h1>
+        <section class="section-right">
+            <h1>Recent Projects</h1>
+
+            <div class="project-cards-wrapper"></div>
+
+            <template id="project-card-template">
+                <div class="project-card">
+                    <h3 class="project-title"></h3>
+                    <div class="project-links"></div>
+                    <a href="" class="read-more-link">Read more</a>
+                </div>
+            </template>
+
         </section>
-    </div>
+
+    </main>
 </body>
 
 </html>
