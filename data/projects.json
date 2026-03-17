@@ -3,29 +3,37 @@
     {
       "id": "db-deduplication",
       "title": "Database Deduplication Workflow",
-      "description": "Python data project completed during my paid internship that deals with the auditing and removal of many product duplicates from the company database.",
+      "description": "Python data project I completed during my internship that identifies and removes duplicate products from the company database.",
       "technologies": ["Python", "MongoDB", "Pandas"],
       "links": {
         "repo": "https://github.com/campbellm92/products-deduplication-workflow"
       },
       "highlights": [
-        "Large CSV dataset processing",
+        "Large CSV and Excel dataset processing",
         "Data auditing",
-        "Clean export pipelines"
+        "Data normalisation",
+        "Removal of duplicate records"
       ],
       "status": ["complete"]
     },
 
     {
       "id": "atp-radio",
-      "title": "ATP Radio",
-      "description": "A fullstack radio application that generates randomised playlists and utilises the Spotify SDK for playback.",
+      "title": "ATP Radio Web App",
+      "description": "A fullstack radio application based on the All Tomorrow's Parties music festival that generates randomised playlists and utilises the Spotify SDK for playback.",
       "technologies": ["Python", "TypeScript", "FastAPI", "HTML", "CSS"],
+      "images": ["/assets/images/projects/atp-radio-1.webp"],
       "links": {
         "repo": "https://github.com/campbellm92/atp-radio",
-        "live": "https://www.slingacademy.com/article/conditional-rendering-show-or-hide-elements-using-javascript/"
+        "live": "https://atp-radio.mattdev.it/"
       },
-      "highlights": ["Custom SQLite database with lineup data", ""],
+      "highlights": [
+        "Custom SQLite database with lineup data",
+        "Authentication with OAuth",
+        "FastAPI REST API",
+        "Vanilla HTML, CSS, TS frontend",
+        "Spotify SDK"
+      ],
       "status": ["live", "development ongoing"]
     },
 
@@ -35,10 +43,13 @@
       "description": "A website built for a local art collective.",
       "technologies": ["PHP", "Wordpress", "JavaScript", "HTML", "TailwindCSS"],
       "links": {
-        "repo": "https://github.com/campbellm92/eo-arte-website",
-        "live": ""
+        "repo": "https://github.com/campbellm92/eo-arte-website"
       },
-      "highlights": ["Wordpress CMS", "Custom Post Types"],
+      "highlights": [
+        "Wordpress CMS",
+        "Custom Post Types",
+        "Responsive layout with Tailwind"
+      ],
       "status": ["coming soon"]
     }
   ]
