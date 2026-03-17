@@ -8,7 +8,6 @@ export async function fetchProjectData() {
   }
 
   const data = await response.json();
-  console.log(data);
 
   return data;
 }
