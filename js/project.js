@@ -20,7 +20,7 @@ async function loadProjectPage() {
   }
 
   // render the data
-  // title:
+  // title
   document.querySelector(".project-detail-title").textContent = project.title;
 
   // technologies
@@ -51,6 +51,7 @@ async function loadProjectPage() {
 
   // project links
   const linksWrapper = document.querySelector(".project-detail-links");
+
   if (project.links.repo) {
     const repoLink = document.createElement("a");
     repoLink.href = project.links.repo;
@@ -59,13 +60,35 @@ async function loadProjectPage() {
     repoLink.rel = "noopener";
     linksWrapper.appendChild(repoLink);
   }
+
   if (project.links.live) {
     const liveLink = document.createElement("a");
-    liveLink.href = project.links.repo;
+    liveLink.href = project.links.live;
     liveLink.textContent = "Live";
     liveLink.target = "_blank";
     liveLink.rel = "noopener";
     linksWrapper.appendChild(liveLink);
+  }
+
+  // project images
+  const projectImagesWrapper = document.querySelector(".project-images");
+  const sectionLeft = document.querySelector(".section-left");
+  const sectionRight = document.querySelector(".section-right");
+
+  if (!project.images) {
+    sectionLeft.style.width = "100%";
+    sectionLeft.style.height = "100vh";
+    sectionRight.style.display = "none";
+  } else {
+    sectionRight.style.display = "block";
+    project.images.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = project.title;
+      img.loading = "lazy";
+
+      projectImagesWrapper.appendChild(img);
+    });
   }
 }
 loadProjectPage();
