@@ -10,6 +10,7 @@ async function renderProjectCardsData() {
 
     cardClone.querySelector(".project-card-title").textContent = project.title;
 
+    // inject project status span elements
     if (project.status.length > 0) {
       const elementBefore = cardClone.querySelector(".project-card-title");
 
