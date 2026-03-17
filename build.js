@@ -1,23 +1,28 @@
 import { minify } from "minify";
-import { mkdirSync, writeFileSync, cpSync } from "fs";
+import { mkdirSync, writeFileSync, cpSync, readFileSync } from "fs";
 import { dirname } from "path";
 
-const files = [
-  { src: "index.html" },
-  { src: "project.html" },
-  { src: "css/global.css" },
-  { src: "css/home.css" },
-  { src: "css/project.css" },
-  { src: "js/api/fetchProjectData.js" },
-  { src: "js/home.js" },
-  { src: "js/project.js" },
+const minifyFiles = [
+  "index.html",
+  "project.html",
+  "css/global.css",
+  "css/home.css",
+  "css/project.css",
 ];
 
-for (const { src } of files) {
+const copyFiles = ["js/api/fetchProjectData.js", "js/home.js", "js/project.js"];
+
+for (const src of minifyFiles) {
   const outPath = `dist/${src}`;
   mkdirSync(dirname(outPath), { recursive: true });
   const minified = await minify(src);
   writeFileSync(outPath, minified);
+}
+
+for (const src of copyFiles) {
+  const outPath = `dist/${src}`;
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, readFileSync(src));
 }
 
 cpSync("assets", "dist/assets", { recursive: true });
