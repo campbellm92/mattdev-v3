@@ -10,6 +10,21 @@ async function renderProjectCardsData() {
 
     cardClone.querySelector(".project-card-title").textContent = project.title;
 
+    if (project.status.length > 0) {
+      const elementBefore = cardClone.querySelector(".project-card-title");
+
+      const statusContainer = document.createElement("div");
+      statusContainer.classList.add("project-status");
+
+      project.status.forEach((status) => {
+        const span = document.createElement("span");
+        span.textContent = status;
+        statusContainer.appendChild(span);
+      });
+
+      elementBefore.after(statusContainer);
+    }
+
     const linksContainer = cardClone.querySelector(".project-card-links");
     if (project.links?.repo) {
       const repoLink = document.createElement("a");
