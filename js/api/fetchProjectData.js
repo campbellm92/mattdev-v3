@@ -1,5 +1,5 @@
 export async function fetchProjectData() {
-  const response = await fetch("../../data/projects.json", {
+  const response = await fetch("/data/projects.json", {
     cache: "force-cache",
   });
 
