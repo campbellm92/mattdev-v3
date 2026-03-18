@@ -27,14 +27,6 @@ async function renderProjectCardsData() {
     }
 
     const linksContainer = cardClone.querySelector(".project-card-links");
-    if (project.links?.repo) {
-      const repoLink = document.createElement("a");
-      repoLink.href = project.links.repo;
-      repoLink.textContent = "GitHub";
-      repoLink.target = "_blank";
-      repoLink.rel = "noopener";
-      linksContainer.appendChild(repoLink);
-    }
     if (project.links?.live) {
       const liveLink = document.createElement("a");
       liveLink.href = project.links.live;
@@ -42,6 +34,22 @@ async function renderProjectCardsData() {
       liveLink.target = "_blank";
       liveLink.rel = "noopener";
       linksContainer.appendChild(liveLink);
+    }
+    if (project.links?.preview) {
+      const previewLink = document.createElement("a");
+      previewLink.href = project.links.preview;
+      previewLink.textContent = "Live preview";
+      previewLink.target = "_blank";
+      previewLink.rel = "noopener";
+      linksContainer.appendChild(previewLink);
+    }
+    if (project.links?.repo) {
+      const repoLink = document.createElement("a");
+      repoLink.href = project.links.repo;
+      repoLink.textContent = "GitHub";
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener";
+      linksContainer.appendChild(repoLink);
     }
     cardClone.querySelector(".read-more-link").href =
       `/project.html?id=${project.id}`;
