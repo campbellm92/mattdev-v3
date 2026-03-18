@@ -33,6 +33,7 @@ a {
 
 .project-detail-technologies {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -87,5 +88,10 @@ a {
   .section-left,
   .section-right {
     width: 100%;
+  }
+
+  .project-detail-technologies {
+    line-height: 0;
+    margin-bottom: 2rem;
   }
 }
