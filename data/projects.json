@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "id": "eo-arte",
+      "title": "EO Arte Website",
+      "description": "A website built for a local art collective.",
+      "technologies": ["PHP", "Wordpress", "JavaScript", "HTML", "TailwindCSS"],
+      "links": {
+        "repo": "https://github.com/campbellm92/eo-arte-website",
+        "preview": "https://preview.eo-arte.mattdev.it/"
+      },
+      "highlights": [
+        "Wordpress CMS",
+        "Custom Post Types",
+        "Responsive layout with Tailwind"
+      ],
+      "status": ["coming soon"]
+    },
+    {
       "id": "db-deduplication",
       "title": "Database Deduplication Workflow",
       "description": "Python data project I completed during my internship that identifies and removes duplicate products from the company database.",
@@ -35,22 +51,6 @@
         "Spotify SDK"
       ],
       "status": ["live", "development ongoing"]
-    },
-
-    {
-      "id": "eo-arte",
-      "title": "EO Arte Website",
-      "description": "A website built for a local art collective.",
-      "technologies": ["PHP", "Wordpress", "JavaScript", "HTML", "TailwindCSS"],
-      "links": {
-        "repo": "https://github.com/campbellm92/eo-arte-website"
-      },
-      "highlights": [
-        "Wordpress CMS",
-        "Custom Post Types",
-        "Responsive layout with Tailwind"
-      ],
-      "status": ["coming soon"]
     }
   ]
 }
